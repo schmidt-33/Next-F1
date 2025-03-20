@@ -9,12 +9,13 @@
 }
 
 .race-card {
-    height: 90%;
+    height: 30%;
     width: 450px;
     outline: solid;
-    outline-width: 0.4rem;
-    border-radius: 0.4rem;
-    margin: 20px
+    outline-width: 0.2rem;
+    border-radius: 0.2rem;
+    margin: 20px;
+    justify-content: center;
 }
 
 .session-name {
