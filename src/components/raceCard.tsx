@@ -1,6 +1,7 @@
 import { Race } from "@/types/raceTypes"
 import "@/raceCard.css"
 import FlagIcon from "./flagIcon"
+import  { countryCodes } from "@/utilities/countryCodes"
 
 export function RaceCard({ params }: {
     params: Race
@@ -10,7 +11,7 @@ export function RaceCard({ params }: {
     return (
         <div className="race-card">
             <div className="flex justify-center p-2">{raceInfo.raceName}</div>
-            <div className="flex justify-center"><FlagIcon countryCode="au"/></div>
+            <div className="flex justify-center"><FlagIcon countryCode={countryCodes[raceInfo.Circuit.Location.country]}/></div>
             <div className="flex justify-center">
                 {(() => {
                     const [y1, m1, d1] = raceInfo.FirstPractice.date.split('-').map(Number);
